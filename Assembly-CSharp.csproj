@@ -79,6 +79,105 @@
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Animation.Runtime">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.Properties">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Jobs">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Jobs.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.StaticTypeRegistry">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Collections">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Scenes.Hybrid">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Scenes.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Extensions">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Extensions.Hybrid">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.BuildUtils">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.Hybrid">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEngineBridge.001">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Properties">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Runtime">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Properties.Reflection">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Properties.Reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Transforms">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Transforms.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Triangle.Runtime">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Transforms.Hybrid">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="PsdPlugin">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Psdimporter.Editor">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -270,6 +369,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>D:/My Games/kitty-in-the-rain/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.CompilerServices.Unsafe">
+ <HintPath>D:/My Games/kitty-in-the-rain/Library/PackageCache/com.unity.collections@0.0.9-preview.18/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
