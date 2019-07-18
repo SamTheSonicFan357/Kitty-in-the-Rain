@@ -57,6 +57,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\CameraAutoScroll.cs" />
+     <Compile Include="Assets\Scripts\CatController.cs" />
+     <Compile Include="Assets\Scripts\GroundGenerator.cs" />
      <None Include="Assets\Sprites\backgrounds\TXT\readme.txt" />
      <None Include="Assets\Sprites\backgrounds\TXT\license.txt" />
  <Reference Include="Unity.Timeline.Editor">
