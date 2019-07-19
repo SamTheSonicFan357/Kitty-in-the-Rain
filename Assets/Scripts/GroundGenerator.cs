@@ -12,7 +12,6 @@ public class GroundGenerator : MonoBehaviour
 
     private const int groundWidth = 1;
 
-    // Update is called once per frame
     private void Update()
     {
         Vector3Int currentCell = tileMap.WorldToCell(transform.position);

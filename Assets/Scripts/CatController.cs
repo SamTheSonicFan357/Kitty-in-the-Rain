@@ -7,30 +7,24 @@ public class CatController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask whatIsGround;
     public int jumpForce;
+    public int fastFallForce;
 
     private Rigidbody2D rigBody;
     private bool hasJumped = false;
+    private bool hasFastFalled = false;
     private bool isGrounded = false;
 
     private const float groundedRadius = .2f;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigBody = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            hasJumped = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-
-        }
+        hasJumped = Input.GetKeyDown(KeyCode.Space) && isGrounded;
+        hasFastFalled = Input.GetKey(KeyCode.DownArrow) && !isGrounded;
     }
 
     private void FixedUpdate()
@@ -41,6 +35,11 @@ public class CatController : MonoBehaviour
         {
             rigBody.AddForce(new Vector2(0f, jumpForce));
             hasJumped = false;
+        }
+        else if (hasFastFalled)
+        {
+            rigBody.AddForce(new Vector2(0f, -fastFallForce));
+            hasFastFalled = false;
         }
     }
 
