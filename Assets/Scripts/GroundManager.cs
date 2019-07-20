@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GroundGenerator : MonoBehaviour
+public class GroundManager : MonoBehaviour
 {
     public Tilemap tileMap;
     public Tile groundTile;
     public Transform generationPoint;
+    public Transform deletionPoint;
     public float distanceBetween;
 
     private const int groundWidth = 1;
@@ -41,5 +42,8 @@ public class GroundGenerator : MonoBehaviour
             transform.position += translation;
             tileMap.SetTile(currentCell, groundTile);
         }
+
+        Vector3Int deletionCell = tileMap.WorldToCell(deletionPoint.position);
+        tileMap.SetTile(deletionCell, null);
     }
 }
