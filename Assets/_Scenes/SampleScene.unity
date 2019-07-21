@@ -5586,6 +5586,10 @@ MonoBehaviour:
   generationPoint: {fileID: 1152547703}
   deletionPoint: {fileID: 647983377}
   distanceBetween: 0
+  minStartGapTime: 1
+  maxStartGapTime: 5
+  minGaps: 3
+  maxGaps: 6
 --- !u!1 &398860214
 GameObject:
   m_ObjectHideFlags: 0

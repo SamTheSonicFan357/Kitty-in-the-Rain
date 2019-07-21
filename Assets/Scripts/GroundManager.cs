@@ -10,7 +10,14 @@ public class GroundManager : MonoBehaviour
     public Transform generationPoint;
     public Transform deletionPoint;
     public float distanceBetween;
+    public float minStartGapTime = 1;
+    public float maxStartGapTime = 3;
+    public int minGaps = 5;
+    public int maxGaps = 8;
 
+    private float elapsedGapWaitTime;
+    private float gapWaitTime;
+    private int gaps = 0;
     private const int groundWidth = 1;
 
     private void Start()
@@ -30,20 +37,41 @@ public class GroundManager : MonoBehaviour
                 tileMap.SetTile(currentCell, groundTile);
             }
         }
+
+        gapWaitTime = Random.Range(minStartGapTime, maxStartGapTime);
     }
 
     private void Update()
     {
-        Vector3Int currentCell = tileMap.WorldToCell(transform.position);
+        if (elapsedGapWaitTime > gapWaitTime)
+        {
+            gapWaitTime = Random.Range(minStartGapTime, maxStartGapTime);
+            elapsedGapWaitTime = 0f;
+            gaps = Random.Range(minGaps, maxGaps);
+            Debug.Log(gaps);
+        }
 
         if (transform.position.x < generationPoint.position.x)
         {
-            Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
-            transform.position += translation;
-            tileMap.SetTile(currentCell, groundTile);
+            if (gaps == 0)
+            {
+                Vector3Int currentCell = tileMap.WorldToCell(transform.position);
+                Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
+                transform.position += translation;
+                tileMap.SetTile(currentCell, groundTile);
+            }
+            else
+            {
+                Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
+                transform.position += translation;
+                gaps--;
+            }
         }
 
+        //Delete any ground tiles that have exited the screen.
         Vector3Int deletionCell = tileMap.WorldToCell(deletionPoint.position);
         tileMap.SetTile(deletionCell, null);
+
+        elapsedGapWaitTime += Time.deltaTime;
     }
 }
