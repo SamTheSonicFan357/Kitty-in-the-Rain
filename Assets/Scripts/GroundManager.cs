@@ -48,24 +48,20 @@ public class GroundManager : MonoBehaviour
             gapWaitTime = Random.Range(minStartGapTime, maxStartGapTime);
             elapsedGapWaitTime = 0f;
             gaps = Random.Range(minGaps, maxGaps);
-            Debug.Log(gaps);
         }
 
         if (transform.position.x < generationPoint.position.x)
         {
+            Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
+            transform.position += translation;
+
             if (gaps == 0)
             {
                 Vector3Int currentCell = tileMap.WorldToCell(transform.position);
-                Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
-                transform.position += translation;
                 tileMap.SetTile(currentCell, groundTile);
             }
             else
-            {
-                Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
-                transform.position += translation;
                 gaps--;
-            }
         }
 
         //Delete any ground tiles that have exited the screen.
