@@ -5590,6 +5590,36 @@ MonoBehaviour:
   maxStartGapTime: 3
   minGaps: 5
   maxGaps: 10
+--- !u!1 &351814418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351814419}
+  m_Layer: 0
+  m_Name: PlatformGenerationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &351814419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351814418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398860214
 GameObject:
   m_ObjectHideFlags: 0
@@ -5806,6 +5836,7 @@ Transform:
   - {fileID: 782583284}
   - {fileID: 1152547703}
   - {fileID: 647983377}
+  - {fileID: 351814419}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6155,7 +6186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 1696637482}
   platformTile: {fileID: 11400000, guid: e5fe17f964a63674987fcc912c53ec76, type: 2}
-  deletionPoint: {fileID: 0}
+  generationPoint: {fileID: 351814419}
   distanceBetween: 0
   minStartSpawnTime: 1
   maxStartSpawnTime: 3

@@ -7,13 +7,15 @@ public class PlatformManager : MonoBehaviour
 {
     public Tilemap tileMap;
     public RuleTile platformTile;
-    public Transform deletionPoint;
+    public Transform generationPoint;
+    //public Transform deletionPoint;
     public float distanceBetween;
     public float minStartSpawnTime = 1;
     public float maxStartSpawnTime = 3;
     public int minGaps = 5;
     public int maxGaps = 8;
 
+    private int screenWidth;
     private float elapsedSpawnWaitTime;
     private float spawnWaitTime;
     private int numOfPlatformTiles = 0;
@@ -21,6 +23,9 @@ public class PlatformManager : MonoBehaviour
 
     void Start()
     {
+        int screenHeight = (int)(2 * Camera.main.orthographicSize);
+        screenWidth = (int)(screenHeight * Camera.main.aspect + 1);
+
         spawnWaitTime = Random.Range(minStartSpawnTime, maxStartSpawnTime);
     }
 
@@ -34,17 +39,21 @@ public class PlatformManager : MonoBehaviour
             numOfPlatformTiles = Random.Range(minGaps, maxGaps);
         }
 
-        Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
-        transform.position += translation;
-
-        if (numOfPlatformTiles > 0)
+        if (transform.position.x < generationPoint.position.x)
         {
-            Vector3Int currentCell = tileMap.WorldToCell(transform.position);
-            tileMap.SetTile(currentCell, platformTile);
-            currentCell = tileMap.WorldToCell(transform.position - new Vector3(1f, 0f));
-            tileMap.SetTile(currentCell, platformTile);
-            numOfPlatformTiles--;
+            Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
+            transform.position += translation;
+
+            if (numOfPlatformTiles > 0)
+            {
+                Vector3Int currentCell = tileMap.WorldToCell(transform.position + new Vector3(0f, 0.5f));
+                tileMap.SetTile(currentCell, platformTile);
+                currentCell = tileMap.WorldToCell(transform.position - new Vector3(0f, 0.5f));
+                tileMap.SetTile(currentCell, platformTile);
+                numOfPlatformTiles--;
+            }
         }
+        
         /*
         //Delete any ground tiles that have exited the screen.
         Vector3Int deletionCell = tileMap.WorldToCell(deletionPoint.position);
