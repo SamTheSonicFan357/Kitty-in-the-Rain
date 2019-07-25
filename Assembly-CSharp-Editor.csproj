@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Tiles\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
      <Compile Include="Assets\Tiles\Rule Override Tile\Scripts\Editor\PopulateRuleOverrideTileWizard.cs" />
      <Compile Include="Assets\Tiles\Rule Override Tile\Scripts\Editor\RuleOverrideTileEditor.cs" />
      <Compile Include="Assets\Tiles\Rule Tile\Scripts\Editor\CustomRuleTileMenu.cs" />
