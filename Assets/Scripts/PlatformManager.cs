@@ -7,7 +7,7 @@ public class PlatformManager : MonoBehaviour
 {
     public Tilemap tileMap;
     public RuleTile platformTile;
-    public Transform generationPoint;
+    public GameObject generationPoint;
     //public Transform deletionPoint;
     public float distanceBetween;
     public float minStartSpawnTime = 1;
@@ -21,7 +21,7 @@ public class PlatformManager : MonoBehaviour
     private int numOfPlatformTiles = 0;
     private const int platformWidth = 1;
 
-    void Start()
+    private void Start()
     {
         int screenHeight = (int)(2 * Camera.main.orthographicSize);
         screenWidth = (int)(screenHeight * Camera.main.aspect + 1);
@@ -29,8 +29,7 @@ public class PlatformManager : MonoBehaviour
         spawnWaitTime = Random.Range(minStartSpawnTime, maxStartSpawnTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (elapsedSpawnWaitTime > spawnWaitTime)
         {
@@ -39,7 +38,7 @@ public class PlatformManager : MonoBehaviour
             numOfPlatformTiles = Random.Range(minGaps, maxGaps);
         }
 
-        if (transform.position.x < generationPoint.position.x)
+        if (transform.position.x < generationPoint.transform.position.x)
         {
             Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
             transform.position += translation;

@@ -7,7 +7,7 @@ public class GroundManager : MonoBehaviour
 {
     public Tilemap tileMap;
     public Tile groundTile;
-    public Transform generationPoint;
+    public GameObject generationPoint;
     public Transform deletionPoint;
     public float distanceBetween;
     public float minStartGapTime = 1;
@@ -29,11 +29,11 @@ public class GroundManager : MonoBehaviour
         {
             Vector3Int currentCell = tileMap.WorldToCell(transform.position);
 
-            if (transform.position.x < generationPoint.position.x)
+            if (transform.position.x < generationPoint.transform.position.x)
             {
                 Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
                 transform.position += translation;
-                generationPoint.position += translation;
+                generationPoint.transform.position += translation;
                 tileMap.SetTile(currentCell, groundTile);
             }
         }
@@ -50,7 +50,7 @@ public class GroundManager : MonoBehaviour
             gaps = Random.Range(minGaps, maxGaps);
         }
 
-        if (transform.position.x < generationPoint.position.x)
+        if (transform.position.x < generationPoint.transform.position.x)
         {
             Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
             transform.position += translation;

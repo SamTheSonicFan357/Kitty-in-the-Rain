@@ -5583,7 +5583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 1302647118}
   groundTile: {fileID: 11400000, guid: 76fdf818da9642948a373785439fa423, type: 2}
-  generationPoint: {fileID: 1152547703}
+  generationPoint: {fileID: 1152547702}
   deletionPoint: {fileID: 647983377}
   distanceBetween: 0
   minStartGapTime: 1
@@ -6186,7 +6186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 1696637482}
   platformTile: {fileID: 11400000, guid: e5fe17f964a63674987fcc912c53ec76, type: 2}
-  generationPoint: {fileID: 351814419}
+  generationPoint: {fileID: 351814418}
   distanceBetween: 0
   minStartSpawnTime: 1
   maxStartSpawnTime: 3
@@ -17444,7 +17444,9 @@ MonoBehaviour:
   brush: {fileID: 11400000, guid: bc7dad52fe0f5d741b3e8b6bfa309322, type: 2}
   collectable: {fileID: 4488889710951720594, guid: ecce5bc3cb0d583429e73dfa3ff73a74,
     type: 3}
-  generationPoint: {fileID: 351814419}
+  generationPoints:
+  - {fileID: 351814418}
+  - {fileID: 1152547702}
   distanceBetween: 0
 --- !u!1 &2129435477
 GameObject:
