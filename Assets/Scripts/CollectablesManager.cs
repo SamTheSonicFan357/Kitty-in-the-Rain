@@ -17,7 +17,6 @@ public class CollectablesManager : MonoBehaviour
     public int minCollectables = 5;
     public int maxCollectables = 8;
 
-    private GameObject generationPoint;
     private float elapsedSpawnWaitTime;
     private float spawnWaitTime;
     private int numOfCollectables = 0;
@@ -32,22 +31,17 @@ public class CollectablesManager : MonoBehaviour
             numOfCollectables = Random.Range(minCollectables, maxCollectables);
         }
 
-        int randIndex = Random.Range(0, generationPoints.Length);
-
-        GameObject generationPoint = generationPoints[randIndex];
-
-        if (transform.position.x < generationPoint.transform.position.x)
+        if (numOfCollectables > 0)
         {
+            int randIndex = Random.Range(0, generationPoints.Length);
+            GameObject generationPoint = generationPoints[randIndex];
+            Vector3Int currentCell = tileMap.WorldToCell(generationPoint.transform.position + new Vector3(0f, 1f));
+            brush.Paint(tileMap, collectable, currentCell);
             Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
             transform.position += translation;
-
-            if (numOfCollectables > 0)
-            {
-                Vector3Int currentCell = tileMap.WorldToCell(generationPoint.transform.position + new Vector3(0f, 1f));
-                brush.Paint(tileMap, collectable, currentCell);
-                numOfCollectables--;
-            }
+            numOfCollectables--;
         }
+
         elapsedSpawnWaitTime += Time.deltaTime;
     }
 }
