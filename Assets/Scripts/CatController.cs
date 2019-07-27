@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CatController : MonoBehaviour
 {
@@ -8,17 +7,21 @@ public class CatController : MonoBehaviour
     public LayerMask whatIsGround;
     public int jumpForce;
     public int fastFallForce;
+    public Text scoreText;
 
     private Rigidbody2D rigBody;
     private bool hasJumped = false;
     private bool hasFastFalled = false;
     private bool isGrounded = false;
+    private int score;
 
     private const float groundedRadius = .2f;
 
     void Start()
     {
         rigBody = gameObject.GetComponent<Rigidbody2D>();
+        score = 0;
+        scoreText.text = "Fish: " + score;
     }
 
     void Update()
@@ -46,7 +49,11 @@ public class CatController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Collectable")
+        {
             Destroy(collider.gameObject);
+            score++;
+            scoreText.text = "Fish: " + score;
+        }
     }
 
     private bool CheckIfGrounded()
