@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\CameraAutoScroll.cs" />
      <Compile Include="Assets\Scripts\CatController.cs" />
      <Compile Include="Assets\Scripts\CollectablesManager.cs" />
+     <Compile Include="Assets\Scripts\DelayedStartScript.cs" />
      <Compile Include="Assets\Scripts\GroundManager.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
      <Compile Include="Assets\Scripts\TimeDisplay.cs" />

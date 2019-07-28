@@ -16,7 +16,7 @@ public class CameraAutoScroll : MonoBehaviour
 
     private void FixedUpdate()
     {
-        player.transform.position += new Vector3(scrollSpeed, 0f);
+        player.transform.position += new Vector3(scrollSpeed * Time.fixedDeltaTime, 0f);
         transform.position = new Vector3(player.transform.position.x - offset.x, transform.position.y, transform.position.z);
     }
 }
