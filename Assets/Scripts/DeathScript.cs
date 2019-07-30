@@ -14,7 +14,6 @@ public class DeathScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Here");
         if (other.gameObject.tag == "BottomOfScreen")
         {
             SceneManager.LoadScene(scene.name);

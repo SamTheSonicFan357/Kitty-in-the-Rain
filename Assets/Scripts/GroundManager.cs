@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class GroundManager : MonoBehaviour
 {
+    public GameObject house;
     public Tilemap tileMap;
     public Tile groundTile;
     public GameObject generationPoint;
@@ -15,6 +16,7 @@ public class GroundManager : MonoBehaviour
     public int minGaps = 5;
     public int maxGaps = 8;
 
+    private int tilesTilEnd;
     private float elapsedGapWaitTime;
     private float gapWaitTime;
     private int gaps = 0;
@@ -38,6 +40,7 @@ public class GroundManager : MonoBehaviour
             }
         }
 
+        tilesTilEnd = Random.Range(80, 150);
         gapWaitTime = Random.Range(minStartGapTime, maxStartGapTime);
     }
 
@@ -55,10 +58,22 @@ public class GroundManager : MonoBehaviour
             Vector3 translation = new Vector3(distanceBetween + groundWidth, 0f);
             transform.position += translation;
 
+            if (tilesTilEnd > 0)
+                tilesTilEnd--;
+
             if (gaps == 0)
             {
                 Vector3Int currentCell = tileMap.WorldToCell(transform.position);
                 tileMap.SetTile(currentCell, groundTile);
+
+                if (tilesTilEnd == 0)
+                {
+                    // Instantiate an object to the right of the current object
+                    Vector3 thePosition = transform.TransformPoint(house.transform.position);
+                    Instantiate(house, thePosition, house.transform.rotation);
+                    tilesTilEnd = -1;
+                }
+                    
             }
             else
                 gaps--;

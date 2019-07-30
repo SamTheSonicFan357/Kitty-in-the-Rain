@@ -8,6 +8,7 @@ public class CatController : MonoBehaviour
     public int jumpForce;
     public int fastFallForce;
     public Text scoreText;
+    public Text winText;
 
     private Rigidbody2D rigBody;
     private bool hasJumped = false;
@@ -53,6 +54,11 @@ public class CatController : MonoBehaviour
             Destroy(collider.gameObject);
             score++;
             scoreText.text = "Fish: " + score;
+        }
+        else if (collider.gameObject.tag == "House")
+        {
+            winText.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - Ceiling
   - BottomOfScreen
+  - House
   layers:
   - Default
   - TransparentFX
