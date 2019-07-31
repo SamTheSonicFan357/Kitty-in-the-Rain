@@ -70,7 +70,8 @@ public class GroundManager : MonoBehaviour
                 {
                     // Instantiate an object to the right of the current object
                     Vector3 thePosition = transform.TransformPoint(house.transform.position);
-                    Instantiate(house, thePosition, house.transform.rotation);
+                    house.transform.position = thePosition;
+                    house.SetActive(true);
                     tilesTilEnd = -1;
                 }
                     
