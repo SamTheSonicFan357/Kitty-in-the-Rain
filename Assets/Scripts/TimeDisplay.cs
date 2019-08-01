@@ -11,11 +11,11 @@ public class TimeDisplay : MonoBehaviour
     void Start()
     {
         timeText = gameObject.GetComponent<Text>();
-        timeText.text = "Time: " + Time.time.ToString("0.0");
+        timeText.text = "Time: " + Time.timeSinceLevelLoad.ToString("0.0");
     }
 
     void Update()
     {
-        timeText.text = "Time: " + Time.time.ToString("0.0");
+        timeText.text = "Time: " + Time.timeSinceLevelLoad.ToString("0.0");
     }
 }

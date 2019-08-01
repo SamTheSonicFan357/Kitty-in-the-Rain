@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\DelayedStartScript.cs" />
      <Compile Include="Assets\Scripts\GroundManager.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
      <Compile Include="Assets\Scripts\TimeDisplay.cs" />
      <Compile Include="Assets\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
