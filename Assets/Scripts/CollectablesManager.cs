@@ -35,11 +35,15 @@ public class CollectablesManager : MonoBehaviour
         {
             int randIndex = Random.Range(0, generationPoints.Length);
             GameObject generationPoint = generationPoints[randIndex];
-            Vector3Int currentCell = tileMap.WorldToCell(generationPoint.transform.position + new Vector3(0f, 1f));
-            brush.Paint(tileMap, collectable, currentCell);
-            Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
-            transform.position += translation;
-            numOfCollectables--;
+
+            if (transform.position.x < generationPoint.transform.position.x)
+            {
+                Vector3Int currentCell = tileMap.WorldToCell(generationPoint.transform.position + new Vector3(0f, 1f));
+                brush.Paint(tileMap, collectable, currentCell);
+                Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
+                transform.position += translation;
+                numOfCollectables--;
+            }
         }
 
         elapsedSpawnWaitTime += Time.deltaTime;
