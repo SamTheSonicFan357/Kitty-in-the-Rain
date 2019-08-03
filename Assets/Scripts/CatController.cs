@@ -8,7 +8,7 @@ public class CatController : MonoBehaviour
     public int jumpForce;
     public int fastFallForce;
     public Text scoreText;
-    public Text winText;
+    public GameObject winMenu;
 
     private Rigidbody2D rigBody;
     private bool hasJumped = false;
@@ -57,7 +57,7 @@ public class CatController : MonoBehaviour
         }
         else if (collider.gameObject.tag == "House")
         {
-            winText.gameObject.SetActive(true);
+            winMenu.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
     }
