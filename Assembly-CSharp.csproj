@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\CameraAutoScroll.cs" />
      <Compile Include="Assets\Scripts\CatController.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\InGameMenuManager.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\TimeDisplay.cs" />
      <Compile Include="Assets\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
      <Compile Include="Assets\Tiles\Rule Tile\Scripts\RuleTile.cs" />
