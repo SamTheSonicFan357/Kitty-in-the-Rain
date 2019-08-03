@@ -6127,6 +6127,7 @@ MonoBehaviour:
   scrollSpeed: 15
   player: {fileID: 782583281}
   house: {fileID: 2021818770}
+  platform: {fileID: 1696637479}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6743,10 +6744,10 @@ GameObject:
   - component: {fileID: 782583283}
   - component: {fileID: 782583282}
   - component: {fileID: 782583285}
-  - component: {fileID: 782583288}
   - component: {fileID: 782583287}
   - component: {fileID: 782583286}
   - component: {fileID: 782583289}
+  - component: {fileID: 782583288}
   m_Layer: 8
   m_Name: Cat
   m_TagString: Untagged
@@ -6886,15 +6887,15 @@ CircleCollider2D:
   m_GameObject: {fileID: 782583281}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0b49a3de59f3c4f43a87dc9f848885a1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: -0.63}
+  m_Offset: {x: -0.12501085, y: -0.37}
   serializedVersion: 2
-  m_Radius: 0.48
---- !u!61 &782583288
-BoxCollider2D:
+  m_Radius: 0.6811322
+--- !u!68 &782583288
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6902,23 +6903,15 @@ BoxCollider2D:
   m_GameObject: {fileID: 782583281}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0b49a3de59f3c4f43a87dc9f848885a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1, y: 0.38}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.71, y: 2.37}
-    newSize: {x: 5.42, y: 4.74}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.23, y: 1.24}
+  m_Offset: {x: 0.55, y: -0.38}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1.5}
 --- !u!114 &782583289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13085,7 +13078,7 @@ GameObject:
   - component: {fileID: 1696637483}
   m_Layer: 0
   m_Name: Platform Rule Tile
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
