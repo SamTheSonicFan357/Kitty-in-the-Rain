@@ -17,7 +17,7 @@ public class CatController : MonoBehaviour
     private bool isGrounded = false;
     private int score;
 
-    private const float groundedRadius = .15f;
+    private const float groundedRadius = .1f;
 
     void Start()
     {
@@ -38,6 +38,7 @@ public class CatController : MonoBehaviour
 
         if (hasJumped)
         {
+            Debug.Log("isJumping = true");
             animator.SetBool("isJumping", true);
             rigBody.AddForce(new Vector2(0f, jumpForce));
             hasJumped = false;
@@ -49,7 +50,10 @@ public class CatController : MonoBehaviour
         }
 
         if (rigBody.velocity.y < 0 && isGrounded)
+        {
+            Debug.Log("isJumping = false");
             animator.SetBool("isJumping", false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
