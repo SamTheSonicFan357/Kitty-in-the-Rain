@@ -6878,6 +6878,7 @@ MonoBehaviour:
   fastFallForce: 400
   scoreText: {fileID: 1127727834}
   winMenu: {fileID: 675329902}
+  animator: {fileID: 782583282}
 --- !u!58 &782583287
 CircleCollider2D:
   m_ObjectHideFlags: 0

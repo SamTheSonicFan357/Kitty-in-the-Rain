@@ -9,6 +9,7 @@ public class CatController : MonoBehaviour
     public int fastFallForce;
     public Text scoreText;
     public GameObject winMenu;
+    public Animator animator;
 
     private Rigidbody2D rigBody;
     private bool hasJumped = false;
@@ -16,7 +17,7 @@ public class CatController : MonoBehaviour
     private bool isGrounded = false;
     private int score;
 
-    private const float groundedRadius = .2f;
+    private const float groundedRadius = .15f;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class CatController : MonoBehaviour
 
         if (hasJumped)
         {
+            animator.SetBool("isJumping", true);
             rigBody.AddForce(new Vector2(0f, jumpForce));
             hasJumped = false;
         }
@@ -45,6 +47,9 @@ public class CatController : MonoBehaviour
             rigBody.AddForce(new Vector2(0f, -fastFallForce));
             hasFastFalled = false;
         }
+
+        if (rigBody.velocity.y < 0 && isGrounded)
+            animator.SetBool("isJumping", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
