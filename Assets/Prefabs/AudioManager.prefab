@@ -46,7 +46,31 @@ MonoBehaviour:
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 90e603c0386e1d7489908d7a1f7d40ad, type: 3}
-    volume: 1
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: d518e92e6b6cd0741bf41b85d09ac874, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: ObtainedCollectable
+    clip: {fileID: 8300000, guid: 778b5e7fba89f4d4bb494367bb39fab4, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Meow
+    clip: {fileID: 8300000, guid: 79866abb2efeee64fb60d4bb8beda4d4, type: 3}
+    volume: 0.65
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Rain
+    clip: {fileID: 8300000, guid: 83acc87d8965887448617a6b8c6cae29, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

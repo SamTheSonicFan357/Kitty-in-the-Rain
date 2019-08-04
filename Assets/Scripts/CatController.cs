@@ -51,12 +51,14 @@ public class CatController : MonoBehaviour
     {
         if (collider.gameObject.tag == "Collectable")
         {
+            FindObjectOfType<AudioManager>().Play("ObtainedCollectable");
             Destroy(collider.gameObject);
             score++;
             scoreText.text = "Fish: " + score;
         }
         else if (collider.gameObject.tag == "House")
         {
+            FindObjectOfType<AudioManager>().Play("Meow");
             winMenu.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }

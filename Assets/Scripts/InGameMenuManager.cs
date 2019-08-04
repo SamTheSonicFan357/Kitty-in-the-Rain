@@ -35,6 +35,7 @@ public class InGameMenuManager : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene("MainMenu");
+        FindObjectOfType<AudioManager>().Stop("Rain");
     }
 
     private void Pause()

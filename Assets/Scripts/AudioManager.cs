@@ -1,5 +1,6 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class AudioManager : MonoBehaviour
@@ -34,6 +35,12 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         Play("MainTheme");
+
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+            Play("Rain");
+        else
+            Stop("Rain");
+            
     }
 
     public void Play(string name)
@@ -45,5 +52,16 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("The sound: " + name + " was not found!");
+            return;
+        }
+        s.source.Stop();
     }
 }

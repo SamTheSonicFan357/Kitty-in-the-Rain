@@ -16,6 +16,7 @@ public class DeathScript : MonoBehaviour
     {
         if (other.gameObject.tag == "BottomOfScreen")
         {
+            FindObjectOfType<AudioManager>().Play("Death");
             SceneManager.LoadScene(scene.name);
         }
     }
