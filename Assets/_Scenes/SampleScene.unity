@@ -19507,9 +19507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileMap: {fileID: 1963891986}
-  brush: {fileID: 11400000, guid: bc7dad52fe0f5d741b3e8b6bfa309322, type: 2}
-  collectable: {fileID: 4488889710951720594, guid: ecce5bc3cb0d583429e73dfa3ff73a74,
-    type: 3}
+  brush: {fileID: 11400000, guid: 1ae9ace2d8820f141b0d4f20388e4679, type: 2}
   generationPoints:
   - {fileID: 1152547702}
   - {fileID: 351814418}

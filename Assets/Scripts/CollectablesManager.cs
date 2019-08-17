@@ -7,8 +7,7 @@ using UnityEditor;
 public class CollectablesManager : MonoBehaviour
 {
     public Tilemap tileMap;
-    public GridBrush brush;
-    public GameObject collectable;
+    public CollectablesBrush brush;
     public GameObject[] generationPoints;
     //public Transform deletionPoint;
     public float distanceBetween;
@@ -39,7 +38,7 @@ public class CollectablesManager : MonoBehaviour
             if (transform.position.x < generationPoint.transform.position.x)
             {
                 Vector3Int currentCell = tileMap.WorldToCell(generationPoint.transform.position + new Vector3(0f, 1f));
-                brush.Paint(tileMap, collectable, currentCell);
+                brush.Paint(tileMap, currentCell);
                 Vector3 translation = new Vector3(distanceBetween + platformWidth, 0f);
                 transform.position += translation;
                 numOfCollectables--;
